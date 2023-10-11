@@ -42,6 +42,45 @@ class Program
             Console.WriteLine("Emprestado? " + m.emprestado);
         }
     }
+
+    static void procurarPorConsole(List<jogo> lista)
+    {
+        Console.WriteLine("Qual console deseja procurar?:");
+        string console = Console.ReadLine();
+
+        Console.WriteLine("Jogos desse console:");
+        foreach (jogo nome in lista)
+        {
+            if (nome.console.ToUpper().Equals(console.ToUpper()))
+            {
+                Console.WriteLine("\nJogo:" + nome.titulo);
+                Console.WriteLine("Console:" + nome.console);
+                Console.WriteLine("Ano de lançamento:" + nome.ano);
+                Console.WriteLine("Ranking:" + nome.ranking);
+            }
+            else{
+                Console.WriteLine("Não há jogos para esse console.");
+                break;
+            }
+        }
+    }
+    static void procurarPorTitulo(List<jogo> lista)
+    {
+        Console.WriteLine("Qual jogo deseja procurar?");
+        string nomeBusca = Console.ReadLine();
+
+        foreach (jogo nome in lista)
+        {
+            if (nome.titulo.ToUpper().Equals(nomeBusca.ToUpper()))
+            {
+                Console.WriteLine("\nJogo:" + nome.titulo);
+                Console.WriteLine("Console:" + nome.console);
+                Console.WriteLine("Ano de lançamento:" + nome.ano);
+                Console.WriteLine("Ranking:" + nome.ranking);
+            }
+        }
+    }
+
     static void Cadastrar(List<jogo> lista)
     {
         jogo novoJogo = new jogo();
@@ -61,8 +100,6 @@ class Program
 
     static void Devolucao(List<emprestimo> listaEmp)
     {
-        emprestimo emprest = new emprestimo();
-
         Console.WriteLine("Qual jogo deseja fazer devolução?");
 
         string nomeBusca = Console.ReadLine();
@@ -86,6 +123,7 @@ class Program
             else
             {
                 Console.WriteLine("Jogo não encontrado nos emprestimos.");
+                break;
             }
         }
     }
@@ -126,6 +164,7 @@ class Program
             else
             {
                 Console.WriteLine("Esse jogo não está cadastrado.");
+                break;
             }
         }
     }
@@ -172,6 +211,12 @@ class Program
                     break;
                 case 5:
                     Devolucao(listaEmprestimo);
+                    break;
+                case 6:
+                    procurarPorTitulo(lista);
+                    break;
+                case 7:
+                    procurarPorConsole(lista);
                     break;
             }
 

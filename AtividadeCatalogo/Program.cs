@@ -24,7 +24,7 @@ class Program
 
         foreach(jogo j in lista)
         {
-            Console.WriteLine("Nome do jogo:" + j.titulo);
+            Console.WriteLine("\nJogo:" + j.titulo);
             Console.WriteLine("Console:" + j.console);
             Console.WriteLine("Ano de lançamento:" + j.ano);
             Console.WriteLine("Ranking:" + j.ranking);
@@ -36,8 +36,8 @@ class Program
     {
         foreach (emprestimo m in lista)
         {
-            Console.WriteLine("Nome do jogo:" + m.tituloJogo);
-            Console.WriteLine("Data do empréstimo:" + m.dataEmprestimo);
+            Console.WriteLine("\nJogo emprestado:" + m.tituloJogo);
+            Console.WriteLine("\nData do empréstimo:" + m.dataEmprestimo);
             Console.WriteLine("Nome da pessoa:" + m.nomePessoaEmprestimo);
             Console.WriteLine("Emprestado? " + m.emprestado);
         }
@@ -59,6 +59,36 @@ class Program
         Console.WriteLine("Jogo cadastrado com sucesso!");
     }
 
+    static void Devolucao(List<emprestimo> listaEmp)
+    {
+        emprestimo emprest = new emprestimo();
+
+        Console.WriteLine("Qual jogo deseja fazer devolução?");
+
+        string nomeBusca = Console.ReadLine();
+        char confirma;
+        int qtd = listaEmp.Count();
+
+
+        for (int i =0; i<qtd; i++)
+        {
+            if (listaEmp[i].tituloJogo.ToUpper().Contains(nomeBusca.ToUpper()))
+            {
+                Console.WriteLine($"Deseja mesmo devolver {listaEmp[i].tituloJogo} ? S/N");
+                confirma = Convert.ToChar(Console.ReadLine());
+
+                if(confirma == 's' || confirma == 'S')
+                {
+                    listaEmp.RemoveAt(i);
+                    Console.WriteLine("Devolução realizada");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Jogo não encontrado nos emprestimos.");
+            }
+        }
+    }
     static void Emprestimo(List<jogo> lista, List<emprestimo> listaEmp)
     {
         Console.WriteLine("Qual jogo deseja realizar empréstimo?");
@@ -71,33 +101,31 @@ class Program
         {
             if (lista[i].titulo.ToUpper().Contains(nomeBusca.ToUpper()))
             {
-                Console.WriteLine($"Deseja mesmo realizar emprestimo de {nomeBusca}? S/N");
+                Console.WriteLine($"Deseja mesmo realizar emprestimo de {lista[i].titulo}? S/N");
                 confirma = Convert.ToChar(Console.ReadLine());
 
-                if(confirma == 's' || confirma == 'S')
+                if (confirma == 's' || confirma == 'S')
                 {
-                    Console.WriteLine("Qual a data do emprestimo:");
+                    Console.Write("Qual a data do emprestimo:");
                     emp.dataEmprestimo = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Qual o nome da pessoa:");
+                    Console.Write("Qual o nome da pessoa:");
                     emp.nomePessoaEmprestimo = Console.ReadLine();
                     emp.emprestado = 'S';
-                    Console.WriteLine($"Emprestimo de {nomeBusca} realizado com sucesso!");
-                    emp.tituloJogo = nomeBusca;
+                    Console.WriteLine($"Emprestimo de {lista[i].titulo} realizado com sucesso!");
+                    emp.tituloJogo = lista[i].titulo;
 
                     listaEmp.Add(emp);
                 }
-                
-                else if(confirma == 'n' || confirma == 'N')
-                {
-                    Console.WriteLine("Operação cancelada.");
-                }
-
                 else
                 {
                     Console.WriteLine("Operação cancelada.");
                 }
-                
 
+
+            }
+            else
+            {
+                Console.WriteLine("Esse jogo não está cadastrado.");
             }
         }
     }
@@ -106,12 +134,14 @@ class Program
     {
         int op;
 
+        Console.WriteLine("*** Catalogo e controle de coleções de jogos v1 ***");
         Console.WriteLine("1 - Cadastrar");
         Console.WriteLine("2 - Listar");
         Console.WriteLine("3 - Realizar emprestimo");
         Console.WriteLine("4 - Listar Emprestimos");
-        Console.WriteLine("5 - Procurar por título");
-        Console.WriteLine("6 - Listar todos os jogos de um console");
+        Console.WriteLine("5 - Realizar devolução");
+        Console.WriteLine("6 - Procurar por título");
+        Console.WriteLine("7 - Listar todos os jogos de um console");
 
         op = Convert.ToInt32(Console.ReadLine());
         return op;
@@ -139,6 +169,9 @@ class Program
                     break;
                 case 4:
                     listarEmprestimo(listaEmprestimo);
+                    break;
+                case 5:
+                    Devolucao(listaEmprestimo);
                     break;
             }
 

@@ -1,0 +1,14 @@
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\bin\Debug\net6.0\AtividadeCatalogo.exe
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\bin\Debug\net6.0\AtividadeCatalogo.deps.json
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\bin\Debug\net6.0\AtividadeCatalogo.runtimeconfig.json
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\bin\Debug\net6.0\AtividadeCatalogo.dll
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\bin\Debug\net6.0\AtividadeCatalogo.pdb
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\AtividadeCatalogo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\AtividadeCatalogo.AssemblyInfoInputs.cache
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\AtividadeCatalogo.AssemblyInfo.cs
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\AtividadeCatalogo.csproj.CoreCompileInputs.cache
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\AtividadeCatalogo.dll
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\refint\AtividadeCatalogo.dll
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\AtividadeCatalogo.pdb
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\AtividadeCatalogo.genruntimeconfig.cache
+C:\Users\Iksortso K2\Desktop\ListaDeExercícios3\Atividade04\AtividadeCatalogo\AtividadeCatalogo\obj\Debug\net6.0\ref\AtividadeCatalogo.dll
